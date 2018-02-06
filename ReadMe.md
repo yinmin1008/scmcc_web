@@ -24,4 +24,5 @@ pip install -r requirements.txt
         |       |       |---- suite             测试集合，用于组织测试用例
         |       |---- utils
         |---- ReadMe.md                  项目介绍文件，可以用于项目介绍和后期项目功能备注
+        |---- requirements.txt           项目依赖文件，使用pip install -r requirements.txt
         |---- run.py                     项目执行入口
