@@ -1,1 +1,2 @@
-alembic==0.8.6
+requests==2.18.4
+xmlrunner==1.7.4

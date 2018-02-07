@@ -4,8 +4,10 @@
 
 
 
-2..环境依赖：
-pip install -r requirements.txt
+2.环境依赖：
+
+    pip install -r requirements.txt
+
 
 
 3.项目结构：
@@ -23,6 +25,33 @@ pip install -r requirements.txt
         |       |       |---- page              po层，放页面对象，便于维护页面元素
         |       |       |---- suite             测试集合，用于组织测试用例
         |       |---- utils
+        |---- venv层                     环境层，放windows环境下的虚拟环境
         |---- ReadMe.md                  项目介绍文件，可以用于项目介绍和后期项目功能备注
         |---- requirements.txt           项目依赖文件，使用pip install -r requirements.txt
         |---- run.py                     项目执行入口
+
+
+
+
+
+
+
+4.case执行思路
+    
+    1. runner -> testsuites -> testcase -> page -> runcase
+    2. page中创建并保存各个页面的元素对象,然后重构各个操作业务流代码
+        其中，__init__：识别并保存页面对象
+    3. testcase中调用具体的业务流函数就OK了
+    
+
+
+5.后期优化
+
+    1. 增加日志功能，测试每一个步骤记录日志
+    2. 增加失败自检功能，如，失败三次时录日志和截图，避免出现不必要的代码bug
+    3. 增加测试结果截图
+    4. 使用xmlrunner对接jenkins，使用jenkins自带模板
+    5. 配置email模块，（具体是使用jenkins还是自己实现，待思考）
+    
+    
+    
