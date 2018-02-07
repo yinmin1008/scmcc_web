@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<testsuite errors="0" failures="0" name="test_search.TestCaseLogin-20180207171650" tests="2" time="20.478">
+	<testcase classname="test_search.TestCaseLogin" name="test_click_news" time="12.462"/>
+	<testcase classname="test_search.TestCaseLogin" name="test_search_success" time="8.015"/>
+	<system-out>
+<![CDATA[setup
+tearDown
+setup
+tearDown
+]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
