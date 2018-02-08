@@ -1,2 +1,3 @@
 requests==2.18.4
 xmlrunner==1.7.4
+logging==0.4.9.6

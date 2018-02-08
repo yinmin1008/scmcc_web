@@ -1,9 +1,11 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
+from src.test.page.page_search_result import SearchResultPage
 from selenium import webdriver
 
-class Index():
+
+class IndexPage():
     def __init__(self, **kwargs):
         self.browser = kwargs.get("browser")
         self.ky = self.browser.find_element_by_id("kw")
@@ -14,6 +16,9 @@ class Index():
     def search(self):
         self.ky.send_keys("123")
         self.su.click()
+
+        # 返回操作后的页面对象，用于后期处理
+        return SearchResultPage(self.browser)
 
     def news_link(self):
         self.news.click()

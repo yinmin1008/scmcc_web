@@ -3,7 +3,7 @@ __author__ = 'snake'
 
 import unittest
 from src.test.common import common
-from src.test.page.index import Index
+from src.test.page.page_index import IndexPage
 
 
 class TestCaseLogin(unittest.TestCase):
@@ -21,11 +21,11 @@ class TestCaseLogin(unittest.TestCase):
 
 
     def test_search_success(self):
-        Index(browser = self.browser).search()
-        assert 1 == 1
+        result_page = IndexPage(browser = self.browser).search()
+        assert result_page.toindex.text == "百度首页"
 
     def test_click_news(self):
-        Index(browser = self.browser).news_link()
+        IndexPage(browser = self.browser).news_link()
 
 
 
