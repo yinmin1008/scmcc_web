@@ -6,7 +6,7 @@
 
 2.环境依赖：
 
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
 
 
 
@@ -27,7 +27,7 @@
         |       |---- utils
         |---- venv层                     环境层，放windows环境下的虚拟环境
         |---- ReadMe.md                  项目介绍文件，可以用于项目介绍和后期项目功能备注
-        |---- requirements.txt           项目依赖文件，使用pip install -r requirements.txt
+        |---- requirements.txt           项目依赖文件，使用pip3 install -r requirements.txt
         |---- run.py                     项目执行入口
 
 
@@ -52,6 +52,7 @@
     3. 增加测试结果截图
     4. 使用xmlrunner对接jenkins，使用jenkins自带模板
     5. 配置email模块，（具体是使用jenkins还是自己实现，待思考）
+    6. 实现数据驱动 -- 优先
     
     
     

@@ -28,7 +28,8 @@ def logger(file_name):
     return logging
 
 def test1():
-    logger(config.PRO_LOG_PATH + "123.log").info("222")
+    log = logger(config.LOG_FILE_NAME)
+    log.info("222")
 
 
 if __name__ == "__main__":

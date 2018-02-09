@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<map>
+
+    <!--
+        1. testcase：每一个testcase.py
+        2. case: 每一个tesatcase.py中的每一个方法
+        3. 每个测试方法的数据添加一行，若一个测试方法需要多个数据，添加多条case数据即可
+    -->
+    <testcase name="test_search">
+        <case name="test_search_success" ky="123"></case>
+        <case name="test_search_success" ky="234"></case>
+        <case name="test_search_success" ky="345"></case>
+        <case name="test_search_success" ky="456"></case>
+
+        <case name="test_search_fail" ky="456" ky1="test1"></case>
+        <case name="test_search_fail" ky="456" ky1="test2"></case>
+        <case name="test_search_fail" ky="456" ky1="test3"></case>
+        <case name="test_search_fail" ky="456" ky1="test4"></case>
+    </testcase>
+
+
+
+
+</map>
+

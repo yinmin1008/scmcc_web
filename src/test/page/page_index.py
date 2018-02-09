@@ -13,8 +13,8 @@ class IndexPage():
         self.news = self.browser.find_element_by_name("tj_trnews")
 
 
-    def search(self):
-        self.ky.send_keys("123")
+    def search(self, keyword):
+        self.ky.send_keys(keyword)
         self.su.click()
 
         # 返回操作后的页面对象，用于后期处理

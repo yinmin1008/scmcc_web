@@ -2,7 +2,7 @@
 __author__ = 'snake'
 
 
-import datetime
+import datetime,sys
 
 
 
@@ -15,7 +15,6 @@ TEST_ROOT_URL = "http://www.baidu.com/"
 """
     ************* 项目package变量路径 **************
 """
-import sys
 PRO_ROOT_PATH = sys.path[1]                                         # 项目root目录
 PRO_CONFIG_PATH = PRO_ROOT_PATH + "\\config\\"                      # 项目config目录
 PRO_DATA_PATH = PRO_ROOT_PATH + "\\data\\"                          # 项目data目录
@@ -33,19 +32,18 @@ PRO_SRC_UTILS_PATH = PRO_ROOT_PATH + "\\src\\utils\\"               # 项目src/
 
 
 
-""" 日志文件名
+""" 测试数据文件目录
+"""
+DATA_FILE_PATH = PRO_DATA_PATH + "testdata.xml"
+
+
+""" 测试日志文件名
 """
 LOG_FILE_NAME = PRO_LOG_PATH + datetime.datetime.now().strftime("%Y-%m-%d.log")
 
 
-
-""" 报告文件名
+""" 测试报告文件名
 """
-
-
 REPORT_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + datetime.datetime.now().strftime("%Y-%m-%d %H_%M_%d.xml")
 REPORT_IMAGE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + datetime.datetime.now().strftime("%Y-%m-%d %H_%M_%d.png")
 
-print(LOG_FILE_NAME)
-print(REPORT_FILE_NAME)
-print(REPORT_IMAGE_NAME)
