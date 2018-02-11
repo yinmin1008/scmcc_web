@@ -9,9 +9,7 @@
     -->
     <testcase name="test_search">
         <case name="test_search_success" ky="123"></case>
-        <case name="test_search_success" ky="234"></case>
-        <case name="test_search_success" ky="345"></case>
-        <case name="test_search_success" ky="456"></case>
+
 
         <case name="test_search_fail" ky="456" ky1="test1"></case>
         <case name="test_search_fail" ky="456" ky1="test2"></case>

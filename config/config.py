@@ -9,11 +9,16 @@ import datetime,sys
 TEST_ROOT_URL = "http://www.baidu.com/"
 
 
-
-
-
+""" 是否重跑失败/错误用例
 """
-    ************* 项目package变量路径 **************
+
+RETEST_ERROR_CASES = True
+RETEST_FAILED_CASES = True
+
+
+
+
+""" 项目package变量路径
 """
 PRO_ROOT_PATH = sys.path[1]                                         # 项目root目录
 PRO_CONFIG_PATH = PRO_ROOT_PATH + "\\config\\"                      # 项目config目录
@@ -44,6 +49,7 @@ LOG_FILE_NAME = PRO_LOG_PATH + datetime.datetime.now().strftime("%Y-%m-%d.log")
 
 """ 测试报告文件名
 """
-REPORT_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + datetime.datetime.now().strftime("%Y-%m-%d %H_%M_%d.xml")
-REPORT_IMAGE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + datetime.datetime.now().strftime("%Y-%m-%d %H_%M_%d.png")
+date = datetime.datetime.now()
+REPORT_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + date.strftime("%Y-%m-%d %H_%M_%d.xml")
+REPORT_IMAGE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + date.strftime("%Y-%m-%d %H_%M_%d.png")
 

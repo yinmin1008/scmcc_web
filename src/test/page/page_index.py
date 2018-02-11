@@ -22,3 +22,4 @@ class IndexPage():
 
     def news_link(self):
         self.news.click()
+

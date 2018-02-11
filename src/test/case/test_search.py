@@ -29,10 +29,13 @@ class TestCaseSearch(unittest.TestCase):
     @data(*keys)
     def test_search_success(self, key):
         result_page = IndexPage(browser = self.browser).search(key.get("ky"))
-        assert result_page.toindex.text == "百度首页"
+        assert result_page.toindex.text == "百度首页1"
+
 
     def test_click_news(self):
-        IndexPage(browser = self.browser).news_link()
+        result_page = IndexPage(browser = self.browser).news_link()
+        raise Exception("123")
+
 
 
 
