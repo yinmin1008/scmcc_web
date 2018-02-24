@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-import unittest
+import unittest,time
 
 from config import config
 from src.test.common import common
@@ -17,25 +17,23 @@ class TestCaseSearch(unittest.TestCase):
 
     # 测试方法执行前执行
     def setUp(self):
-        self.browser = common.get_browser()
+        self.driver = common.get_browser()
 
 
     # 测试方法执行后执行
     def tearDown(self):
-        self.browser.close()
-
+        print("停止运行....")
 
     # 测试搜索成功
     @data(*keys)
     def test_search_success(self, key):
-        result_page = IndexPage(browser = self.browser).search(key.get("ky"))
-        assert result_page.toindex.text == "百度首页1"
+        result_page = IndexPage(driver=self.driver).search(key.get("ky"))
+        assert result_page.toindex.text == "百度首页"
 
 
     def test_click_news(self):
-        result_page = IndexPage(browser = self.browser).news_link()
+        result_page = IndexPage(driver=self.driver).news_link()
         raise Exception("123")
-
 
 
 

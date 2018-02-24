@@ -9,7 +9,6 @@
     pip3 install -r requirements.txt
 
 
-
 3.项目结构：
 
     scmcc_web:
@@ -39,7 +38,7 @@
 4.case执行思路
     
     1. runner -> testsuites -> testcase -> page -> runcase
-    2. page中创建并保存各个页面的元素对象,然后重构各个操作业务流代码
+    2. page中创建并保存各个页面的元素对象,重构各个操作业务流代码
         其中，__init__：识别并保存页面对象
     3. testcase中调用具体的业务流函数就OK了
     4. 数据驱动，利用ddt框架实现，具体见test_searche
@@ -48,10 +47,15 @@
 5.后期优化
 
     1. 增加日志功能，测试每一个步骤记录日志
-    2. 增加失败自检功能（异常处理），如，失败三次时录日志和截图，避免出现不必要的代码bug 类似于testng失败重跑
-    3. 增加测试结果截图
-    4. 使用xmlrunner对接jenkins，使用jenkins自带模板
+    2. _增加失败自检功能（异常处理）_，如，失败三次时录日志和截图，避免出现不必要的代码bug 类似于testng失败重跑 *
+        - 已完成，参照https://github.com/GoverSky/HTMLTestRunner/ 并修改源码实现，已修改其中某些BUG和某些样式问题
+    3. _增加测试结果截图 * 修改htmlTestRunner实现
+    4. _使用xmlrunner对接jenkins，使用jenkins自带模板 （-XXXX 废弃，改用htmltestrunner，实现单文件快速浏览和定位问题）
     5. 配置email模块，（具体是使用jenkins还是自己实现，待思考）
-    6. 实现数据驱动 -- 利用ddt框架实现 *
+    6. _实现数据驱动 -- 利用ddt框架实现 *
+    7. _统一异常处理 （-XXXX 废弃，异常时重跑case实现）
+    8. 写大量case测试框架稳定性
     
-    
+
+6.参考
+1. htmltestrunner参考： https://github.com/GoverSky/HTMLTestRunner/

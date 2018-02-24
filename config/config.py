@@ -50,6 +50,7 @@ LOG_FILE_NAME = PRO_LOG_PATH + datetime.datetime.now().strftime("%Y-%m-%d.log")
 """ 测试报告文件名
 """
 date = datetime.datetime.now()
-REPORT_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + date.strftime("%Y-%m-%d %H_%M_%d.xml")
-REPORT_IMAGE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + date.strftime("%Y-%m-%d %H_%M_%d.png")
+REPORT_FAILED_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") +"FAILED_CASE_"+ date.strftime("%Y_%m_%d %H_%M_%d.html")
+REPORT_SUCCESS_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + "ALL_CASE_" + date.strftime("%Y_%m_%d %H_%M_%d.html")
+REPORT_IMAGE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\") + date.strftime("%Y_%m_%d %H_%M_%d.png")
 

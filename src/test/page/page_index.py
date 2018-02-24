@@ -7,10 +7,10 @@ from selenium import webdriver
 
 class IndexPage():
     def __init__(self, **kwargs):
-        self.browser = kwargs.get("browser")
-        self.ky = self.browser.find_element_by_id("kw")
-        self.su = self.browser.find_element_by_id("su")
-        self.news = self.browser.find_element_by_name("tj_trnews")
+        self.driver = kwargs.get("driver")
+        self.ky = self.driver.find_element_by_id("kw")
+        self.su = self.driver.find_element_by_id("su")
+        self.news = self.driver.find_element_by_name("tj_trnews")
 
 
     def search(self, keyword):
@@ -18,7 +18,7 @@ class IndexPage():
         self.su.click()
 
         # 返回操作后的页面对象，用于后期处理
-        return SearchResultPage(self.browser)
+        return SearchResultPage(self.driver)
 
     def news_link(self):
         self.news.click()

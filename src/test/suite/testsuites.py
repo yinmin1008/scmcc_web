@@ -5,6 +5,7 @@ __author__ = 'snake'
 import unittest
 from config import config
 
+
 class TestSuites():
     def get_testsuites(self):
         test_suites = unittest.TestSuite()
