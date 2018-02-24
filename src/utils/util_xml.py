@@ -9,6 +9,7 @@ Created on 2017年3月7日
 import xml.etree.ElementTree as ET
 from config import config
 
+
 class XmlUtils:
 
     @staticmethod

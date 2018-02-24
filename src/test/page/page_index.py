@@ -2,7 +2,6 @@
 __author__ = 'snake'
 
 from src.test.page.page_search_result import SearchResultPage
-from selenium import webdriver
 
 
 class IndexPage():

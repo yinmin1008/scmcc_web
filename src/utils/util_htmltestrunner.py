@@ -1,4 +1,4 @@
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 """
 A TestRunner for use with the Python unit testing framework. It
 generates a HTML report to show the result at a glance.
@@ -68,7 +68,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 __author__ = "Wai Yip Tung"
 __version__ = "0.8.3"
 
-
 """
 Change History
 Version 0.8.4 by GoverSky
@@ -110,6 +109,7 @@ if PY3K:
 else:
     import StringIO
 import copy
+
 
 # ------------------------------------------------------------------------
 # The redirectors below are used to capture output during testing. Output
@@ -338,7 +338,6 @@ function close_shots(obj) {
 </html>
 """
     # variables: (title, generator, stylesheet, heading, report, ending)
-
 
     # ------------------------------------------------------------------------
     # Stylesheet
@@ -653,12 +652,12 @@ class _TestResult(TestResult):
             if self.status == 1:
                 self.trys += 1
                 if self.trys <= self.retry:
-                    print("%s -- retesting... %d" % (test,self.trys))
+                    print("%s -- retesting... %d" % (test, self.trys))
                     test = copy.copy(test)
                     doc = test._testMethodDoc
-                    if doc!=None and -1!=doc.find('_retry'):
+                    if doc != None and -1 != doc.find('_retry'):
                         doc = doc[:doc.find('_retry')]
-                    desc ="%s_retry:%d" %(doc, self.trys)
+                    desc = "%s_retry:%d" % (doc, self.trys)
                     if not PY3K:
                         if isinstance(desc, str):
                             desc = desc.decode("utf-8")
@@ -723,6 +722,7 @@ class _TestResult(TestResult):
         else:
             sys.stderr.write('F')
         driver.close()
+
 
 class HTMLTestRunner(Template_mixin):
     """

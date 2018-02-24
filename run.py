@@ -1,7 +1,7 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-import xmlrunner,re,unittest,datetime,os
+import xmlrunner, re, unittest, datetime, os
 from config import config
 
 from src.utils.util_htmltestrunner import HTMLTestRunner
@@ -46,8 +46,7 @@ from src.test.suite.testsuites import TestSuites
 #     return run_test(report_desc, report_file, report_folder, report_title, test_suites)
 
 
-
-def run_test(report_desc,report_file,report_folder,report_title, test_suites):
+def run_test(report_desc, report_file, report_folder, report_title, test_suites):
     if not os.path.exists(report_folder):
         os.mkdir(report_folder)
 
@@ -58,17 +57,37 @@ def run_test(report_desc,report_file,report_folder,report_title, test_suites):
     return result
 
 
+def test():
+    # 进入浏览器设置
+    from selenium import webdriver
+
+    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
+    url = "http://wap.sc.10086.cn/wap/login.html"
+    driver.get(url)
+
+    driver.add_cookie(
+        {'name': 'JSESSIONID', 'value': '0KTG7GoyDm1AXNKiVWU43hwJpPtKdALsquQXhz2WQzjV1cVc2FWg!1908483680'})
+    driver.add_cookie(
+        {'name': 'scwap_uli', 'value': 'ZjvG7GKq6ToW2Joi1Wz1mmAfaAHPVFXbdbljjR0EoIu2xzCyAc_R!-904159996!1519460836010'})
+    driver.add_cookie({'name': 'scwap_uli_ic', 'value': 'f152b1314e1f4c34b3039dbf342f64e8'})
+    driver.add_cookie({'name': 'scwap_uli_rem', 'value': 'b28da43a21434b918119ca75fbc091fb'})
+    driver.add_cookie({'name': 'scwap_ulo', 'value': '0'})
+    driver.get(url)
+
+    import time
+    time.sleep(2)
+    driver.quit()
+
 
 if __name__ == "__main__":
     report_file = config.REPORT_SUCCESS_FILE_NAME
     report_folder = config.PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\")
-    report_title = "四川移动网厅 " + datetime.datetime.now().strftime("%Y-%m-%d")+" 自动测试报告"
-    report_desc = datetime.datetime.now().strftime("%Y-%m-%d") + " 网厅自动化测试报告，巡检结果仅供参考"
+    report_title = "四川移动WAP厅 " + datetime.datetime.now().strftime("%Y-%m-%d") + " 自动测试报告"
+    report_desc = datetime.datetime.now().strftime("%Y-%m-%d") + " WAP厅自动化测试报告，巡检结果仅供参考"
 
     # 第一次：跑所有case
     test_suites = TestSuites().get_testsuites()
     result = run_test(report_desc, report_file, report_folder, report_title, test_suites)
-
 
     # 解析结果并根据配置文件重跑指定case
     # retest_cases = {}
@@ -86,7 +105,3 @@ if __name__ == "__main__":
     #
     # if config.RETEST_FAILED_CASES:
     #     retesting_case(get_result_method(result.failures))
-
-
-
-
