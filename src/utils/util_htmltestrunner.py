@@ -379,8 +379,8 @@ a.popup_link:hover {
     color: red;
 }
 .img{
-	width: 50%;
-	height: 50%;
+	width: 80%;
+	height: 80%;
 	border-collapse: collapse;
     border: 2px solid #777;
 }
@@ -394,7 +394,7 @@ a.popup_link:hover {
 }
 .close_shots {
 	position:absolute;
-	top:0; left:48%;
+	top:0; left:78%;
 	z-index:99;
 	width:20px;
 }

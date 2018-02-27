@@ -5,7 +5,7 @@ import datetime, sys
 
 
 TEST_WAP_URL = "http://wap.sc.10086.cn/wap/login.html"
-TEST_WEB_URL = "http://www.sc.10086.cn/service/index.html"
+TEST_WEB_URL = "http://www.sc.10086.cn/service/my/SC_MY_INDEX.html"
 TEST_ROOT_URL = "http://www.baidu.com/"
 
 """ 是否重跑失败/错误用例
