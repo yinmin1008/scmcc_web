@@ -37,13 +37,14 @@ def get_wap_driver():
     driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
     driver.get(config.TEST_WAP_URL)
     driver.add_cookie(
-        {'name': 'JSESSIONID', 'value': 'hULU5wRmyDwOGpJN_ApGDus7JtA-WOpr3CnZdpEMaI7ZQrdQNhux!-904159996'})
+        {'name': 'JSESSIONID', 'value': 'Zg7mH7wh0QbRAQhdc2WkK_jkBs3APL2UvBMXBAYuIsqmiOR6cxiO!-904159996'})
     driver.add_cookie(
         {'name': 'scwap_uli', 'value': 'ep_U5sgT9-Zrs33js_pn_CCyW1Wxv0Y7w-hzS0mVc9GOtODmPw95!1908483680!1519695349779'})
     driver.add_cookie({'name': 'scwap_uli_ic', 'value': 'dcc0eb9a90d746fb90d5cfc90e1c98c8'})
     driver.add_cookie({'name': 'scwap_uli_rem', 'value': '206428f00eca48579d3d93dccb269c20'})
     driver.add_cookie({'name': 'scwap_ulo', 'value': '0'})
-    driver.add_cookie({'name': 'WT_FPC', 'value': 'id=23bee684bcca92482ee1519463807137:lv=1519695348306:ss=1519695344095'})
+    driver.add_cookie({'name': 'WT_FPC', 'value': 'id=23bee684bcca92482ee1519463807137:lv=1519984294685:ss=1519984294685'})
     driver.get(config.TEST_WAP_URL)
 
     return driver
+

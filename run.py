@@ -1,11 +1,11 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-import xmlrunner, re, unittest, datetime, os
+import datetime, os
 from config import config
-
-from src.utils.util_htmltestrunner import HTMLTestRunner
 from src.test.suite.testsuites import TestSuites
+from src.utils.util_htmltestrunner import HTMLTestRunner
+
 
 
 # def get_result_method(testresult):
@@ -55,28 +55,6 @@ def run_test(report_desc, report_file, report_folder, report_title, test_suites)
         result = runner.run(test_suites)
 
     return result
-
-
-def test():
-    # 进入浏览器设置
-    from selenium import webdriver
-
-    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
-    url = "http://wap.sc.10086.cn/wap/login.html"
-    driver.get(url)
-
-    driver.add_cookie(
-        {'name': 'JSESSIONID', 'value': '0KTG7GoyDm1AXNKiVWU43hwJpPtKdALsquQXhz2WQzjV1cVc2FWg!1908483680'})
-    driver.add_cookie(
-        {'name': 'scwap_uli', 'value': 'ZjvG7GKq6ToW2Joi1Wz1mmAfaAHPVFXbdbljjR0EoIu2xzCyAc_R!-904159996!1519460836010'})
-    driver.add_cookie({'name': 'scwap_uli_ic', 'value': 'f152b1314e1f4c34b3039dbf342f64e8'})
-    driver.add_cookie({'name': 'scwap_uli_rem', 'value': 'b28da43a21434b918119ca75fbc091fb'})
-    driver.add_cookie({'name': 'scwap_ulo', 'value': '0'})
-    driver.get(url)
-
-    import time
-    time.sleep(2)
-    driver.quit()
 
 
 if __name__ == "__main__":
