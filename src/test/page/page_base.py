@@ -2,6 +2,9 @@
 __author__ = 'snake'
 
 
+from config import config
+from selenium import webdriver
+
 
 class BasePage():
 
@@ -15,5 +18,3 @@ class BasePage():
             return self.driver.find_element_by_xpath(value)
         if type == "class":
             return self.driver.find_element_by_class_name(value)
-
-    # 封装click/input/

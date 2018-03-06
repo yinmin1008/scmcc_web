@@ -14,9 +14,10 @@
        可快速定位问题，并且容易扩展优化。
 
 
-2.环境依赖
+2.环境依赖和运行入口
 
-    pip3 install -r requirements.txt
+    依赖：pip3 install -r requirements.txt
+    运行：python3 run.py
 
 
 3.项目结构

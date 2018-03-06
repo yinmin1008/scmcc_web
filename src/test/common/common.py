@@ -48,3 +48,11 @@ def get_wap_driver():
 
     return driver
 
+
+
+def is_element_exist(driver, element):
+    try:
+        driver.find_element(element)
+        return True
+    except :
+        return False
