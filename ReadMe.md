@@ -17,7 +17,10 @@
 2.环境依赖和运行入口
 
     依赖：pip3 install -r requirements.txt
-    运行：python3 run.py
+    运行：
+        1. 设置项目所有根目录（config.PRO_ROOT_PATH）
+        2. python run.py
+    
 
 
 3.项目结构

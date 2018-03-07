@@ -11,7 +11,7 @@ TEST_ROOT_URL = "http://www.baidu.com/"
 
 """ 项目package变量路径
 """
-PRO_ROOT_PATH = sys.path[1]  # 项目root目录
+PRO_ROOT_PATH = "C:\\Users\\root\\PycharmProjects\\scmcc_web"  # 项目root目录
 PRO_CONFIG_PATH = PRO_ROOT_PATH + "\\config\\"  # 项目config目录
 PRO_DATA_PATH = PRO_ROOT_PATH + "\\data\\"  # 项目data目录
 PRO_DRIDERS_PATH = PRO_ROOT_PATH + "\\drivers\\"  # 项目drivers目录
