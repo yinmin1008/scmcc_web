@@ -60,4 +60,5 @@
     
 
 6.参考
-1. htmltestrunner参考： https://github.com/GoverSky/HTMLTestRunner/
+
+    1. htmltestrunner参考： https://github.com/GoverSky/HTMLTestRunner/
