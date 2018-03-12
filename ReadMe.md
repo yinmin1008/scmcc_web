@@ -16,7 +16,7 @@
 
     依赖：pip3 install -r requirements.txt
     运行：
-        1. 设置项目所在根目录（例如:config.PRO_ROOT_PATH）
+        1. 设置项目根目录的绝对路径（例如:config.PRO_ROOT_PATH=D:\\scmcc_web）
         2. python run.py
 
 
