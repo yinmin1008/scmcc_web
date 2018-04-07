@@ -7,22 +7,39 @@ from src.test.common import common
 from src.test.page.page_wap_login import LoginPage
 from selenium.webdriver.support import expected_conditions as EC
 
+# 数据驱动依赖
+from config import config
+from src.utils.util_xml import XmlUtils
+from ddt import data,ddt,file_data,unpack
+
+
+@ddt
 class TestCaseLogin(unittest.TestCase):
+
     def setUp(self):
         self.driver = common.get_wap_driver()
+
 
     def tearDown(self):
         pass
 
-    def test_login_success(self):
+
+    # 登陆成功用例
+    @data(*XmlUtils.read_xml_document(config.DATA_FILE_PATH, "test_login_success"))
+    def test_login_success(self, key):
         login_page = LoginPage(driver=self.driver)
-        index_page = login_page.service_login(username="15008520344", password="15008420344", verify_code="123456")
+        username = key.get("username")
+        password = key.get("password")
+        ver_code = key.get("vCode")
+        index_page = login_page.service_login(username,  password,  ver_code)
         url = EC.url_contains("login.html")
         assert url(self.driver) == False
 
 
-    def test_login_failed(self):
+    # 登陆失败用例
+    @data(*XmlUtils.read_xml_document(config.DATA_FILE_PATH, "test_login_failed"))
+    def test_login_failed(self, key):
         login_page = LoginPage(driver=self.driver)
-        index_page = login_page.service_login(username="15008520344", password="15008420344", verify_code="123456")
+        index_page = login_page.service_login(key.get("username"), key.get("password"), key.get("vCode"))
         url = EC.url_contains("login.html")
         assert url(self.driver)
