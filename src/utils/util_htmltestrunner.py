@@ -701,7 +701,7 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('E')
-
+        print (err)
         driver.close()
 
     def addFailure(self, test, err):

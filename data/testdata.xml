@@ -9,10 +9,10 @@
     -->
 
     <testcase name="test_login">
-        <case name="test_login_failed" username="15008420344" password="15008420344" vCode="123456"></case>
+        <case name="test_login_failed" username="15008420344" password="15008420344"></case>
 
-        <case name="test_login_success" username="15008420344" password="15008420344" vCode="123456"></case>
-        <case name="test_login_success" username="15008420344" password="15008420344" vCode="123456"></case>
+        <case name="test_login_success" username="15008420344" password="150000"></case>
+        <case name="test_login_success" username="15008420334" password="150000"></case>
     </testcase>
 
 
