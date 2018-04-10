@@ -37,7 +37,5 @@ LOG_FILE_NAME = PRO_LOG_PATH + datetime.datetime.now().strftime("%Y-%m-%d.log")
 """ 测试报告文件名
 """
 date = datetime.datetime.now()
-REPORT_FAILED_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime(
-    "%Y-%m-%d\\") + "FAILED_CASE_" + date.strftime("%Y_%m_%d %H_%M_%d.html")
 REPORT_SUCCESS_FILE_NAME = PRO_REPORT_PATH + datetime.datetime.now().strftime(
-    "%Y-%m-%d\\") + "TEST_CASE_" + date.strftime("%Y_%m_%d %H_%M_%d.html")
+    "%Y-%m-%d\\") + "TEST_REPORT_" + date.strftime("%Y_%m_%d %H_%M_%d.html")

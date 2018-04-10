@@ -7,14 +7,14 @@ from selenium import webdriver
 
 
 def get_browser():
-    browser = webdriver.Chrome(config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
+    browser = webdriver.Chrome(config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
     browser.get(config.TEST_ROOT_URL)
     driver.maximize_window()
 
     return browser
 
 def get_web_driver():
-    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
+    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
     driver.get(config.TEST_WEB_URL)
     driver.maximize_window()
 
@@ -23,7 +23,7 @@ def get_web_driver():
 
 
 def get_wap_driver():
-    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.34.exe')
+    driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
     driver.get(config.TEST_WAP_URL)
     driver.maximize_window()
 
