@@ -680,8 +680,11 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('.')
-        driver = getattr(test, "driver")
-        driver.close()
+        try:
+            driver = getattr(test, "driver")
+            driver.close()
+        except:
+            pass
 
     def addError(self, test, err):
         self.error_count += 1
@@ -702,7 +705,10 @@ class _TestResult(TestResult):
         else:
             sys.stderr.write('E')
         print (err)
-        driver.close()
+        try:
+            driver.close()
+        except:
+            pass
 
     def addFailure(self, test, err):
         self.failure_count += 1
@@ -722,7 +728,10 @@ class _TestResult(TestResult):
             sys.stderr.write('\n')
         else:
             sys.stderr.write('F')
-        driver.close()
+        try:
+            driver.close()
+        except:
+            pass
 
 
 class HTMLTestRunner(Template_mixin):

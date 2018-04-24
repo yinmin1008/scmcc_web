@@ -12,7 +12,7 @@ TEST_DEMO_URL = "http://www.baidu.com/"
 
 """ 项目package变量路径
 """
-PRO_ROOT_PATH = os.path.abspath('..')  # 项目root目录
+PRO_ROOT_PATH = "C:\\Users\\SNake\\PycharmProjects\\scmcc_web"  # 项目root目录
 PRO_LOG_PATH = PRO_ROOT_PATH + "\\log\\"  # 项目log目录
 PRO_SRC_PATH = PRO_ROOT_PATH + "\\src\\"  # 项目src目录
 PRO_DATA_PATH = PRO_ROOT_PATH + "\\data\\"  # 项目data目录

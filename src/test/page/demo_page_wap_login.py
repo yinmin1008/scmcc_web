@@ -2,11 +2,9 @@
 __author__ = 'snake'
 
 import os
-from PIL import Image
 from config import config
-from src.utils.util_captach import fuck_captache
 from src.test.page.page_base import BasePage
-from src.test.page.demo_page_wap_index import MyIndexPage
+from src.test.page.demo_wap_index import MyIndexPage
 
 class LoginPage(BasePage):
     def __init__(self, **kwargs):
@@ -41,10 +39,12 @@ class LoginPage(BasePage):
         right = self.img_code.location['x'] + self.img_code.size['width']
         bottom = self.img_code.location['y'] + self.img_code.size['height']
 
-        im = Image.open(temp)
-        im = im.crop((left, top, right, bottom))
-        im.save(file_name)
-        captache = fuck_captache(file_name)
+        # 需要配合Image库截图并发送识别...
+        # im = Image.open(temp)
+        # im = im.crop((left, top, right, bottom))
+        # im.save(file_name)
+        # captache = fuck_captache(file_name)
+        captache = "0000"
 
         try:
             os.remove(temp)

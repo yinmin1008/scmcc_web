@@ -17,7 +17,8 @@
     依赖：
         pip3 install -r requirements.txt
     运行：
-        python run.py
+        1. 设置config.py中PRO_ROOT_PATH为当前目录的根目录
+        2. python run.py
 
 
 3.项目结构
