@@ -3,7 +3,7 @@ __author__ = 'snake'
 
 import unittest
 from src.test.common import common
-from src.test.page.page_wap_index import MyIndexPage
+from src.test.page.demo_page_wap_index import MyIndexPage
 
 
 

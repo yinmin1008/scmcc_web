@@ -23,11 +23,11 @@ def run_test(report_desc, report_file, report_folder, report_title, test_suites)
 if __name__ == "__main__":
     report_file = config.REPORT_SUCCESS_FILE_NAME
     report_folder = config.PRO_REPORT_PATH + datetime.datetime.now().strftime("%Y-%m-%d\\")
-    report_title = "四川移动WAP厅 " + datetime.datetime.now().strftime("%Y-%m-%d") + " 自动测试报告"
+    report_title = "四川移动网厅 " + datetime.datetime.now().strftime("%Y-%m-%d") + " 自动测试报告"
     report_desc = datetime.datetime.now().strftime("%Y-%m-%d") + " WAP厅自动化测试报告，巡检结果仅供参考"
 
 
-    # 运行calse所有case
+    # 运行所有case
     test_suites = TestSuites().get_testsuites()
     result = run_test(report_desc, report_file, report_folder, report_title, test_suites)
 

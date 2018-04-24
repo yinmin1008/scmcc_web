@@ -4,7 +4,7 @@ __author__ = 'snake'
 
 import unittest,time
 from src.test.common import common
-from src.test.page.page_wap_login import LoginPage
+from src.test.page.demo_page_wap_login import LoginPage
 from selenium.webdriver.support import expected_conditions as EC
 
 # 数据驱动依赖

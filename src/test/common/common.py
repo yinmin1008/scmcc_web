@@ -6,12 +6,13 @@ from config import config
 from selenium import webdriver
 
 
-def get_browser():
-    browser = webdriver.Chrome(config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
-    browser.get(config.TEST_ROOT_URL)
+def get_demo_driver():
+    driver = webdriver.Chrome(config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
+    driver.get(config.TEST_ROOT_URL)
     driver.maximize_window()
 
-    return browser
+    return driver
+
 
 def get_web_driver():
     driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
@@ -21,14 +22,12 @@ def get_web_driver():
     return driver
 
 
-
 def get_wap_driver():
     driver = webdriver.Chrome(executable_path=config.PRO_DRIDERS_PATH + 'chromedriver-2.35.exe')
     driver.get(config.TEST_WAP_URL)
     driver.maximize_window()
 
     return driver
-
 
 
 def is_element_exist(driver, element):

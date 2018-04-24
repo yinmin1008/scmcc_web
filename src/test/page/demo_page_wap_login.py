@@ -6,7 +6,7 @@ from PIL import Image
 from config import config
 from src.utils.util_captach import fuck_captache
 from src.test.page.page_base import BasePage
-from src.test.page.page_wap_index import MyIndexPage
+from src.test.page.demo_page_wap_index import MyIndexPage
 
 class LoginPage(BasePage):
     def __init__(self, **kwargs):
