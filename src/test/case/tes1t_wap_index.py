@@ -3,8 +3,7 @@ __author__ = 'snake'
 
 import unittest
 from src.test.common import common
-from src.test.page.demo_wap_index import MyIndexPage
-
+from src.test.page.page1_wap_index import MyIndexPage
 
 
 class TestCaseIndex(unittest.TestCase):
@@ -13,7 +12,6 @@ class TestCaseIndex(unittest.TestCase):
 
     def tearDown(self):
         pass
-
 
     def test_user_a_phone(self):
         assert MyIndexPage().user_phone.text == "15008420344"

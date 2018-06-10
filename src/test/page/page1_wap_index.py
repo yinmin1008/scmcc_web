@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-
 from src.test.page.page_base import BasePage
+
 
 class MyIndexPage(BasePage):
     def __init__(self, **kwargs):

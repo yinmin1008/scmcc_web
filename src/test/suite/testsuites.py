@@ -1,7 +1,6 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-
 import unittest
 from config import config
 

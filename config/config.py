@@ -25,7 +25,7 @@ PRO_SCR_TEST_PAGE_PATH = PRO_ROOT_PATH + "\\src\\test\\page\\"  # 项目src/test
 PRO_SCR_TEST_CASE_PATH = PRO_ROOT_PATH + "\\src\\test\\case\\"  # 项目src/test/case目录
 PRO_SCR_TEST_SUITE_PATH = PRO_ROOT_PATH + "\\src\\test\\suite\\"  # 项目src/test/suite目录
 PRO_SCR_TEST_COMMON_PATH = PRO_ROOT_PATH + "\\src\\test\\common\\"  # 项目src/test/common目录
-
+RPO_SRC_TEST_SOURCES = PRO_ROOT_PATH + "\\src\\test\\sources\\" # 项目/src/test/sources目录
 
 """ 测试数据文件目录
 """

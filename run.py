@@ -18,6 +18,7 @@ def run_test(report_desc, report_file, report_folder, report_title, test_suites)
 
     return result
 
+
 def send_mail(RECIPIENT, report_title, report_desc, report_file):
     # 初始化邮箱信息
     try:

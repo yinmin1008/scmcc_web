@@ -1,16 +1,16 @@
 # -*- coding:utf-8 -*-
 __author__ = 'snake'
 
-
-import unittest,time
+import time
+import unittest
 from src.test.common import common
-from src.test.page.demo_page_wap_login import LoginPage
+from src.test.page.page_wap_login import LoginPage
 from selenium.webdriver.support import expected_conditions as EC
 
 # 数据驱动依赖
 from config import config
 from src.utils.util_xml import XmlUtils
-from ddt import data,ddt,file_data,unpack
+from ddt import data, ddt, file_data, unpack
 
 
 @ddt
@@ -19,10 +19,8 @@ class TestCaseLogin(unittest.TestCase):
     def setUp(self):
         self.driver = common.get_wap_driver()
 
-
     def tearDown(self):
         pass
-
 
     # 登陆成功用例
     @data(*XmlUtils.read_xml_document(config.DATA_FILE_PATH, "test_login_success"))
@@ -33,8 +31,7 @@ class TestCaseLogin(unittest.TestCase):
         index_page = login_page.service_login(username,  password)
         time.sleep(5)
         url = EC.url_contains("login.html")
-        assert url(self.driver) == False
-
+        assert url(self.driver) is False
 
     # 登陆失败用例
     @data(*XmlUtils.read_xml_document(config.DATA_FILE_PATH, "test_login_failed"))
