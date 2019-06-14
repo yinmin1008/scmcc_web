@@ -34,8 +34,8 @@ if __name__ == "__main__":
     report_file = config.REPORT_SUCCESS_FILE_NAME                                         # 测试报告文件
     report_folder = config.PRO_REPORT_PATH + \
                     datetime.datetime.now().strftime("%Y-%m-%d\\")                        # 测试报告文件夹
-    report_title = "【异常反馈】+ 四川移动网厅自动化巡检 +" + now_date                    # 报告和邮件标题
-    report_desc = now_date + " 四川移动网厅自动化测试巡检报告，测试结果可能仅供参考."     # 报告和邮件描述
+    report_title = "【异常反馈】+ xxx系统自动化巡检 +" + now_date                    # 报告和邮件标题
+    report_desc = now_date + " xxx系统自动化测试巡检报告，测试结果可能仅供参考."     # 报告和邮件描述
 
     """运行所有case
     """
@@ -51,7 +51,7 @@ if __name__ == "__main__":
         print("发送错误的case的测试报告邮件...")
 
         # 邮件帐号密码/接受方密码
-        report_title = "【错误反馈】 + 网厅 + " + now_date
+        report_title = "【错误反馈】 + xxx系统 + " + now_date
         report_desc = "时间:%s\n" \
                       "类型:错误\n" \
                       "数量:%s\n" \
@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
         # 邮件帐号密码/接受方密码
         # RECIPIENT.append("656882274@qq.com")
-        report_title = "【异常告警】 + 四川移动网厅自动化测试 +" + now_date
+        report_title = "【异常告警】 + xxx系统测试 +" + now_date
         report_desc = "时间:%s\n" \
                       "类型:错误\n" \
                       "数量:%s\n" \
